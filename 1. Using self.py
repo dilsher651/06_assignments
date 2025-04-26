@@ -1,16 +1,15 @@
-class Counter:
-    count = 0  # Class variable to track the number of objects
-
-    def __init__(self):
-        Counter.count += 1  # Increment count when a new object is created
-
-    @classmethod
-    def display_count(cls):
-        print(f"Total objects created: {cls.count}")
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+    
+    def display(self):
+        print(f"Student Name: {self.name}")
+        print(f"Marks: {self.marks}")
 
 # Example usage:
-obj1 = Counter()
-obj2 = Counter()
-obj3 = Counter()
+student1 = Student("Dilber", 95)
+student1.display()
 
-Counter.display_count()  # Output: Total objects created: 3
+student2 = Student("ayaan", 98)
+student2.display()
